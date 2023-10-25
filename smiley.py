@@ -14,8 +14,9 @@ class Smiley:
 
         Y = self.YELLOW
         O = self.BLANK
+        G = self.GREEN
         self.pixels = [
-            O, Y, Y, Y, Y, Y, Y, O,
+            O, G, G, G, G, G, G, O,
             Y, Y, Y, Y, Y, Y, Y, Y,
             Y, Y, Y, Y, Y, Y, Y, Y,
             Y, Y, Y, Y, Y, Y, Y, Y,
@@ -37,6 +38,12 @@ class Smiley:
         Show the smiley on the screen.
         """
         self.sense_hat.set_pixels(self.pixels)
+
+    def complexion(self):
+        """
+        Add complexion to smileys and set the colour to yellow
+        """
+        return self.YELLOW
 
 
 
