@@ -14,7 +14,6 @@ class Happy(Smiley, Blinkable):
     """
     def __init__(self):
         super().__init__()
-
         self.draw_mouth()
         self.draw_eyes()
 
@@ -33,7 +32,15 @@ class Happy(Smiley, Blinkable):
         """
         eyes = [10, 13, 18, 21]
         for pixel in eyes:
-            self.pixels[pixel] = self.BLANK if wide_open else self.YELLOW
+            self.pixels[pixel] = self.BLANK if wide_open else self.complexion()
+
+    #def draw_face(self):
+        """
+        Method that draws the face on the standard smiley using the complexion method.
+        """
+        #for pixel in range(len(self.pixels)):
+            #if pixel not in [0, 7, 41, 46, 50, 51, 52, 53, 10, 13, 18, 21]:
+                #self.pixels[pixel] = self.complexion()
 
     def blink(self, delay=0.25):
         """
